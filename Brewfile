@@ -4,6 +4,8 @@ tap 'homebrew/cask-eid'
 tap 'homebrew/cask-fonts'
 tap 'homebrew/cask-versions'
 tap 'homebrew/bundle'
+tap 'bibendi/dip'
+tap 'heroku/brew'
 
 # Binaries
 brew 'awscli'
@@ -15,6 +17,7 @@ brew 'gh'
 brew 'git'
 brew 'gnupg2'
 brew 'grep'
+brew 'heroku'
 brew 'httpie'
 brew 'hub'
 brew 'mackup'
@@ -25,6 +28,7 @@ brew 'svn'
 brew 'trash' # Manage the Trash bin
 brew 'tree' # List directories in a tree structure
 brew 'zlib' # Needed for Memcached
+brew 'z' # Z
 
 # Spatie Medialibrary
 brew 'jpegoptim'
@@ -34,6 +38,7 @@ brew 'svgo'
 brew 'gifsicle'
 
 # Development
+brew 'dip' # https://github.com/bibendi/dip
 brew 'php'
 brew 'php@7.3'
 brew 'php@7.2'

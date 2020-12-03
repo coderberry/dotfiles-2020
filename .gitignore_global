@@ -38,4 +38,11 @@ Thumbs.db
 .idea/
 .vscode
 .vagrant/
-.irb-save-history
+**/.irb-save-history
+**/.generators
+**/.rakeTasks
+!/.history/
+.history/
+vendor/bundle/
+.env
+overmind-start

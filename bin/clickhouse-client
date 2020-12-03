@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run -it --rm --name clickhouse-client --link clickhouse-server:clickhouse-server yandex/clickhouse-client --host clickhouse-server

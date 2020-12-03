@@ -7,6 +7,9 @@ alias phpstorm='open -a /Applications/PhpStorm.app "`pwd`"'
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias c="clear"
 
+# Ruby
+alias bake="bundle exec rails "
+
 # Directories
 alias dotfiles="cd $DOTFILES"
 alias library="cd $HOME/Library"
@@ -37,7 +40,8 @@ alias vreload="vagrant reload"
 alias vrebuild="vagrant destroy --force && vagrant up"
 
 # Docker
-alias docker-composer="docker-compose"
+alias dc="docker-compose"
+alias dcr="docker-compose run"
 
 # Git
 alias gst="git status"

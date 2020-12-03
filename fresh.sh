@@ -40,11 +40,28 @@ mkdir $HOME/Code
 rm -rf $HOME/.zshrc
 ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 
-# Symlink .irbrc
+# Symlink .irbrc, .gemrc and .railsrc
 ln -s $HOME/.dotfiles/.irbrc $HOME/.irbrc
+ln -s $HOME/.dotfiles/.gemrc $HOME/.gemrc
+ln -s $HOME/.dotfiles/.railsrc $HOME/.railsrc
+
+# Symlink .mertrc
+ln -s $HOME/.dotfiles/.mertrc $HOME/.mertrc
+
+# Symlink .gitignore
+ln -s $HOME/.dotfiles/.gitignore_global $HOME/.gitignore
+
+# Symlink .gitconfig
+ln -s $HOME/.dotfiles/.gitconfig $HOME/.gitconfig
+
+# Symlink .tmux.conf
+ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
 
 # Symlink the Mackup config file to the home directory
 ln -s $HOME/.dotfiles/.mackup.cfg $HOME/.mackup.cfg
+
+# Symlink the bin folder
+ln -s $HOME/.dotfiles/bin $HOME/.bin
 
 # Set macOS preferences
 # We will run this last because this will reload the shell

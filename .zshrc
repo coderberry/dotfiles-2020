@@ -19,7 +19,7 @@ export MNML_RPROMPT=('mnml_cwd 20')
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="dracula-pro"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -108,6 +108,37 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# rbenv
-export PATH="$HOME/.rbenv/bin:$PATH"
+# Disable Spring for all Rails apps (Spring sucks)
+DISABLE_SPRING=1
+
+# Set default editor
+EDITOR="vim"
+
+# https://coderwall.com/p/s-2_nw/change-iterm2-color-profile-from-the-cli
+it2prof() { echo -e "\033]50;SetProfile=$1\a" }
+
+# Allow [ or ] whereever you want
+unsetopt nomatch
+
+# Flossbank
+. /Users/eberry/.flossbank/env
+
 eval "$(rbenv init -)"
+eval "$(dip console)"
+
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+
+  autoload -Uz compinit
+  compinit
+fi
+. /usr/local/opt/asdf/asdf.sh
+. /Users/eberry/.flossbank/env
+. /usr/local/etc/profile.d/z.sh
+
+# Added by serverless binary installer
+export PATH="$HOME/.serverless/bin:$PATH"
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true

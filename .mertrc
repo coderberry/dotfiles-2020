@@ -1,0 +1,30 @@
+firepoint:
+  root: ~/Code/firepoint
+  layout:
+    -
+      - lsof -t -i tcp:3001 | xargs kill -KILL; bundle exec rails server:frontend; clear
+      - lsof -t -i tcp:3000 | xargs kill -KILL;  bundle exec rails server:backend; clear
+    -
+      - redis-cli flushall;  bundle exec sidekiq -C config/sidekiq.yml; clear
+      - 'echo "To start ngrok, use: ngrok http --subdomain=fp-local 3000"'
+    -
+      - code .
+mlss:
+  root: ~/Code/mls_service
+  layout:
+    -
+      - lsof -t -i tcp:3002 | xargs kill -KILL; bundle exec rails server -p 3002; clear
+      - redis-cli flushall; bundle exec sidekiq -C config/sidekiq.yml; clear
+    -
+      - bundle exec guard start
+      - code .; open http://localhost:3002
+rebase:
+  root: ~/Code/rebase
+  layout:
+    -
+      - lsof -t -i tcp:3000 | xargs kill -KILL; bundle exec rails server; clear
+      - lsof -t -i tcp:3035 | xargs kill -KILL; bundle exec ./bin/webpack-dev-server; clear
+    -
+      - redis-cli flushall; bundle exec sidekiq -C config/sidekiq.yml; clear
+      - stripe listen --forward-to localhost:5000/webhooks/stripe
+      - code .

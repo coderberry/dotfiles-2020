@@ -19,10 +19,13 @@ export PATH="$HOME/.bin:$PATH"
 #export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
 
 # Realvolve
-export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
+# export PATH="/usr/local/opt/elasticsearch@2.4/bin:$PATH"
 
 # Flossbank
 export PATH="/Users/eberry/.flossbank/bin:$PATH"
 
 # Cargo (Rust)
-export PATH="$HOME/.cargo/bin:$PATH"
+# export PATH="$HOME/.cargo/bin:$PATH"
+
+# LibPQ
+export PATH="/usr/local/opt/libpq/bin:$PATH"

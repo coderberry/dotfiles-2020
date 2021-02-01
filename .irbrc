@@ -1,8 +1,6 @@
 require "rubygems"
-require "wirble"
-require "pp"
-Wirble.init
-Wirble.colorize
+require "amazing_print"
+AmazingPrint.irb!
 
 # Easily print methods local to an object's class
 class Object

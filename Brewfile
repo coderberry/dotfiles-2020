@@ -20,9 +20,11 @@ brew 'grep'
 brew 'heroku'
 brew 'httpie'
 brew 'hub'
+brew 'libpq'
 brew 'mackup'
 brew 'mas' # Mac App Store manager
 brew 'pkg-config' # https://github.com/driesvints/dotfiles/issues/20
+brew 'redis'
 # brew 'stripe'
 brew 'svn'
 brew 'trash' # Manage the Trash bin
@@ -112,6 +114,6 @@ cask 'font-source-serif-pro'
 # Mac App Store
 mas 'Keynote', id: 409183694
 mas 'Numbers', id: 409203825
-mas 'Spark', id: 1176895641
-mas 'Things', id: 904280696
-mas 'Tweetbot', id: 1384080005
+# mas 'Spark', id: 1176895641
+# mas 'Things', id: 904280696
+# mas 'Tweetbot', id: 1384080005

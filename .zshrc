@@ -105,8 +105,8 @@ export LANG=en_US.UTF-8
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# alias zshconfig="code ~/.zshrc"
+# alias ohmyzsh="code ~/.oh-my-zsh"
 
 # Disable Spring for all Rails apps (Spring sucks)
 DISABLE_SPRING=1
@@ -123,6 +123,8 @@ unsetopt nomatch
 # Flossbank
 . /Users/eberry/.flossbank/env
 
+export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
+
 eval "$(rbenv init -)"
 eval "$(dip console)"
 
@@ -132,13 +134,11 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
-. /usr/local/opt/asdf/asdf.sh
+# . /usr/local/opt/asdf/asdf.sh
 . /Users/eberry/.flossbank/env
 . /usr/local/etc/profile.d/z.sh
 
 # Added by serverless binary installer
 export PATH="$HOME/.serverless/bin:$PATH"
 
-# tabtab source for packages
-# uninstall by removing these lines
-[[ -f ~/.config/tabtab/__tabtab.zsh ]] && . ~/.config/tabtab/__tabtab.zsh || true
+export PATH="/Applications/Postgres.app/Contents/Versions/9.6/bin:$PATH"
